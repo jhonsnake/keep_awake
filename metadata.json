@@ -1,0 +1,36 @@
+{
+    "KPackageStructure": "Plasma/Applet",
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "jhonprada@gmail.com",
+                "Name": "jhonsnake"
+            }
+        ],
+        "Category": "System Information",
+        "Description": "Keep the computer awake: inhibits automatic suspend and the screensaver while active",
+        "Description[de]": "Den Computer wach halten: unterdrückt automatischen Ruhezustand und Bildschirmschoner, solange aktiv",
+        "Description[es]": "Mantiene el equipo despierto: inhibe la suspensión automática y el salvapantallas mientras está activo",
+        "Description[fr]": "Maintenir l'ordinateur éveillé : empêche la mise en veille automatique et l'économiseur d'écran tant que c'est actif",
+        "Description[it]": "Mantieni il computer attivo: impedisce la sospensione automatica e il salvaschermo mentre è attivo",
+        "Description[ja]": "コンピューターをスリープさせない: 有効な間、自動サスペンドとスクリーンセーバーを抑制します",
+        "Description[pt_BR]": "Mantém o computador acordado: inibe a suspensão automática e o protetor de tela enquanto ativo",
+        "Description[ru]": "Не давать компьютеру засыпать: блокирует автоматический спящий режим и заставку, пока включено",
+        "Description[zh_CN]": "保持计算机唤醒：启用时阻止自动挂起和屏幕保护程序",
+        "Icon": "preferences-desktop-screensaver",
+        "Id": "org.kde.keep_awake",
+        "Name": "Keep Awake",
+        "Name[de]": "Wach halten",
+        "Name[es]": "Mantener despierto",
+        "Name[fr]": "Maintenir éveillé",
+        "Name[it]": "Mantieni attivo",
+        "Name[ja]": "スリープ防止",
+        "Name[pt_BR]": "Manter acordado",
+        "Name[ru]": "Не засыпать",
+        "Name[zh_CN]": "保持唤醒",
+        "License": "MIT",
+        "Version": "1.0",
+        "EnabledByDefault": true
+    },
+    "X-Plasma-API-Minimum-Version": "6.0"
+}

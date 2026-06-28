@@ -1,0 +1,23 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: keep_awake 1.0\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Keep Awake"
+msgstr "保持唤醒"
+
+msgid "Active: the computer will not sleep or start the screensaver"
+msgstr "已启用：计算机不会休眠或启动屏幕保护程序"
+
+msgid "Inactive: normal power behavior"
+msgstr "已禁用：正常电源行为"
+
+msgid "Active — the computer won't sleep"
+msgstr "已启用 — 计算机不会休眠"
+
+msgid "Inactive — normal power"
+msgstr "已禁用 — 正常电源"

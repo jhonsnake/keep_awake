@@ -1,0 +1,23 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: keep_awake 1.0\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Keep Awake"
+msgstr "スリープ防止"
+
+msgid "Active: the computer will not sleep or start the screensaver"
+msgstr "有効: コンピューターはスリープせず、スクリーンセーバーも起動しません"
+
+msgid "Inactive: normal power behavior"
+msgstr "無効: 通常の電源動作"
+
+msgid "Active — the computer won't sleep"
+msgstr "有効 — コンピューターはスリープしません"
+
+msgid "Inactive — normal power"
+msgstr "無効 — 通常の電源"

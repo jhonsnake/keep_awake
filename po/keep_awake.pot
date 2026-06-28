@@ -1,0 +1,27 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: keep_awake 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: contents/ui/main.qml
+msgid "Keep Awake"
+msgstr ""
+
+#: contents/ui/main.qml
+msgid "Active: the computer will not sleep or start the screensaver"
+msgstr ""
+
+#: contents/ui/main.qml
+msgid "Inactive: normal power behavior"
+msgstr ""
+
+#: contents/ui/main.qml
+msgid "Active — the computer won't sleep"
+msgstr ""
+
+#: contents/ui/main.qml
+msgid "Inactive — normal power"
+msgstr ""

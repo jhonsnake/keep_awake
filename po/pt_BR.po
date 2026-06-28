@@ -1,0 +1,23 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: keep_awake 1.0\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+msgid "Keep Awake"
+msgstr "Manter acordado"
+
+msgid "Active: the computer will not sleep or start the screensaver"
+msgstr "Ativo: o computador não suspenderá nem ativará o protetor de tela"
+
+msgid "Inactive: normal power behavior"
+msgstr "Inativo: comportamento de energia normal"
+
+msgid "Active — the computer won't sleep"
+msgstr "Ativo — o computador não será suspenso"
+
+msgid "Inactive — normal power"
+msgstr "Inativo — energia normal"
