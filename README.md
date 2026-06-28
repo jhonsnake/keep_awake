@@ -10,8 +10,9 @@ correctly on both **Wayland** and **X11**.
 ## Features
 
 - One-click toggle that lives in your panel / system tray.
+- **Global keyboard shortcut** to toggle it from anywhere (default `Meta+Shift+K`).
 - Inhibits **automatic suspend** and the **screensaver / screen locking** while active.
-- Visual state: bright icon = active, dimmed icon = inactive.
+- Coffee-cup icon that follows your color scheme: full/accent = active, dimmed = inactive.
 - Releases the inhibition automatically when toggled off or when the widget is removed.
 - No external dependencies beyond what ships with Plasma.
 - Localized into English, Spanish, German, French, Portuguese (Brazil), Italian,
@@ -52,9 +53,21 @@ kquitapp6 plasmashell && kstart plasmashell
 
 1. Right-click on your **panel** → **Add Widgets…**
 2. Search for **Keep Awake** and drag it onto the panel.
-3. Click the icon to toggle:
-   - **Bright icon** → active: the computer will not sleep and the screensaver is inhibited.
-   - **Dimmed icon** → inactive: normal power behavior.
+3. Click the coffee-cup icon to toggle:
+   - **Full / accent-colored cup** → active: the computer will not sleep and the screensaver is inhibited.
+   - **Dimmed cup** → inactive: normal power behavior.
+
+### Keyboard shortcut
+
+The widget registers a global shortcut to toggle Keep Awake from anywhere, even
+when the panel is not focused.
+
+- **Default:** `Meta+Shift+K` (Meta is the Super / Windows key).
+- **To change it:** open **System Settings → Keyboard → Shortcuts**, search for
+  **Keep Awake**, and set your own key combination. (Equivalent CLI: `kcmshell6 kcm_keys`.)
+
+The shortcut and a left-click on the icon do exactly the same thing: flip the
+active/inactive state.
 
 To confirm it is working while active:
 

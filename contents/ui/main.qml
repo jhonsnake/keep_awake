@@ -12,9 +12,10 @@ PlasmoidItem {
     // kde-inhibit holds the inhibition for as long as the child command runs.
     // "sleep infinity" keeps it alive until we disconnect the source (which kills it).
     readonly property string inhibitCmd: "kde-inhibit --power --screenSaver sleep infinity"
+    readonly property url coffeeIcon: Qt.resolvedUrl("../icons/coffee.svg")
 
     preferredRepresentation: compactRepresentation
-    Plasmoid.icon: "preferences-desktop-screensaver"
+    Plasmoid.icon: coffeeIcon
 
     toolTipMainText: i18n("Keep Awake")
     toolTipSubText: awake
@@ -54,42 +55,26 @@ PlasmoidItem {
 
         Kirigami.Icon {
             anchors.fill: parent
-            source: "preferences-desktop-screensaver"
-            active: compactRoot.containsMouse
-            opacity: root.awake ? 1.0 : 0.45
+            source: root.coffeeIcon
+            isMask: true
+            color: root.awake ? Kirigami.Theme.highlightColor : Kirigami.Theme.textColor
+            opacity: root.awake ? 1.0 : (compactRoot.containsMouse ? 0.85 : 0.55)
         }
     }
 
-    fullRepresentation: Item {
-        Layout.minimumWidth: Kirigami.Units.gridUnit * 9
-        Layout.minimumHeight: Kirigami.Units.gridUnit * 7
-
-        ColumnLayout {
-            anchors.centerIn: parent
-            spacing: Kirigami.Units.largeSpacing
-
-            Kirigami.Icon {
-                Layout.alignment: Qt.AlignHCenter
-                implicitWidth: Kirigami.Units.iconSizes.enormous
-                implicitHeight: Kirigami.Units.iconSizes.enormous
-                source: "preferences-desktop-screensaver"
-                opacity: root.awake ? 1.0 : 0.45
-
-                MouseArea {
-                    anchors.fill: parent
-                    onClicked: root.toggle()
-                }
-            }
-            Text {
-                Layout.alignment: Qt.AlignHCenter
-                color: Kirigami.Theme.textColor
-                text: root.awake ? i18n("Active — the computer won't sleep")
-                                 : i18n("Inactive — normal power")
-            }
+    // The global shortcut fires the applet's activated() signal; route it to toggle().
+    // A default shortcut is set imperatively (a declarative binding can't convert a
+    // string to QKeySequence in Plasma 6). It is only applied when the user has not
+    // already chosen one, so a custom shortcut survives restarts.
+    Component.onCompleted: {
+        if (String(Plasmoid.globalShortcut).length === 0) {
+            Plasmoid.globalShortcut = "Meta+Shift+K"
         }
+        Plasmoid.activated.connect(root.toggle)
     }
 
     Component.onDestruction: {
+        Plasmoid.activated.disconnect(root.toggle)
         if (awake) {
             executable.disconnectSource(inhibitCmd)
         }

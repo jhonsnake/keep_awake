@@ -17,7 +17,7 @@
         "Description[pt_BR]": "Mantém o computador acordado: inibe a suspensão automática e o protetor de tela enquanto ativo",
         "Description[ru]": "Не давать компьютеру засыпать: блокирует автоматический спящий режим и заставку, пока включено",
         "Description[zh_CN]": "保持计算机唤醒：启用时阻止自动挂起和屏幕保护程序",
-        "Icon": "preferences-desktop-screensaver",
+        "Icon": "contents/icons/coffee.svg",
         "Id": "org.kde.keep_awake",
         "Name": "Keep Awake",
         "Name[de]": "Wach halten",
