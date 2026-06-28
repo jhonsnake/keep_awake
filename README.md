@@ -69,13 +69,17 @@ when the panel is not focused.
 The shortcut and a left-click on the icon do exactly the same thing: flip the
 active/inactive state.
 
-To confirm it is working while active:
+To confirm it is working while active, query KDE's power-management policy agent:
 
 ```bash
-systemd-inhibit --list
+qdbus6 org.kde.Solid.PowerManagement.PolicyAgent \
+  /org/kde/Solid/PowerManagement/PolicyAgent \
+  org.kde.Solid.PowerManagement.PolicyAgent.ActiveInhibitions
 ```
 
-You should see an inhibitor held by `kde-inhibit`.
+While active you should see `sleep` and `idle` inhibitions held. (Note: KDE uses
+the freedesktop PowerManagement/ScreenSaver D-Bus interfaces, so these inhibitions
+do **not** appear in `systemd-inhibit --list`.)
 
 ## How it works
 
