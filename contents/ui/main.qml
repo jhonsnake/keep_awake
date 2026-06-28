@@ -58,8 +58,10 @@ PlasmoidItem {
             source: root.coffeeIcon
             // coffee.svg uses currentColor, so Kirigami recolors it via `color`
             // (no isMask: grabbed/painted reliably and adapts to light/dark panels).
+            // Always full opacity so it stays clearly visible on the panel; the
+            // active/inactive state is shown by color (accent vs text color).
             color: root.awake ? Kirigami.Theme.highlightColor : Kirigami.Theme.textColor
-            opacity: root.awake ? 1.0 : (compactRoot.containsMouse ? 0.85 : 0.55)
+            opacity: compactRoot.containsMouse && !root.awake ? 0.8 : 1.0
         }
     }
 
